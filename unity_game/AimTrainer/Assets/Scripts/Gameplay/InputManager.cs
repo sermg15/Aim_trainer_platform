@@ -39,9 +39,14 @@ public class InputManager : MonoBehaviour
             }
             else
             {
-                Debug.Log("No target hit.");
-                //scoreManager.RegisterMiss();
+                Debug.Log("Se ha pulsado algo que no es un objeto target");
+                scoreManager.RegisterMiss();
             }
+        }
+        else
+        {
+            Debug.Log("No se ha pulsado nada");
+            scoreManager.RegisterMiss();
         }
     }
 }
