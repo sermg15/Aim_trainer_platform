@@ -10,13 +10,23 @@ public class TargetManager : MonoBehaviour
     [SerializeField] private GameObject targetPrefab;
     private List<GameObject> activeTargets = new List<GameObject>();
     private float maxLifetime = 1.5f; // Maximum lifetime of a target in seconds
-    [SerializeField] private ScoreManager scoreManager;
+    //[SerializeField] private ScoreManager scoreManager;
     [SerializeField] private GameObject leftUp;
     [SerializeField] private GameObject rightDown;
     public int tagetsSpawned = 0;
-    static int maxTargets = 30;
+    private int targetId = 0;
+    private Target currentTarget;
+
+    [SerializeField] private int maxTargets = 30;
+    [SerializeField] private float targetLifetimeSeconds = 1.5f;
+
+    public int MaxTargets => maxTargets;
+    public float TargetLifetimeSeconds => targetLifetimeSeconds;
+    public Target CurrentTarget => currentTarget;
 
     public event Action OnGameFinished;
+
+    [SerializeField] private SessionRecorder sessionRecorder;
 
     public Vector3 calculateTargetPosition()
     {
@@ -42,13 +52,15 @@ public class TargetManager : MonoBehaviour
         GameObject instance = Instantiate(targetPrefab, position, Quaternion.identity);
         activeTargets.Add(instance);
 
-        var targetComponent = instance.GetComponent<Target>();
-        if (targetComponent != null)
+        currentTarget = instance.GetComponent<Target>();
+        if (currentTarget != null)
         {
             // Suscribimos con métodos nombrados para poder desuscribirlos después
-            targetComponent.OnExpired += HandleTargetExpired;
-            targetComponent.OnHit += HandleTargetClicked;
-            targetComponent.InitializeTarget();
+            currentTarget.OnExpired += HandleTargetExpired;
+            currentTarget.OnHit += HandleTargetClicked;
+            currentTarget.InitializeTarget(targetId, targetLifetimeSeconds);
+            sessionRecorder.RegisterTarget(targetId, position);
+            targetId++;
         }
         else
         {
@@ -71,7 +83,7 @@ public class TargetManager : MonoBehaviour
 
     private void HandleTargetClicked(Target t)
     {
-        scoreManager.RegisterHit();
+        sessionRecorder.RegisterHit(t.TargetId, t.ElapsedTimeMs);
 
         RemoveTarget(t.gameObject);
 
@@ -80,7 +92,7 @@ public class TargetManager : MonoBehaviour
 
     private void HandleTargetExpired(Target t)
     {
-        scoreManager.RegisterMiss();
+        sessionRecorder.RegisterTimeout(t.TargetId);
 
         RemoveTarget(t.gameObject);
 
@@ -97,6 +109,11 @@ public class TargetManager : MonoBehaviour
             // Desuscribimos para evitar fugas de memoria
             targetComp.OnExpired -= HandleTargetExpired;
             targetComp.OnHit -= HandleTargetClicked;
+
+            if (currentTarget == targetComp)
+            {
+                currentTarget = null;
+            }
         }
 
         if (activeTargets.Contains(target))
@@ -110,6 +127,7 @@ public class TargetManager : MonoBehaviour
     public void StartGame()
     {
         tagetsSpawned = 0;
+        targetId = 0;
         SpawnNextTarget();
     }
 }

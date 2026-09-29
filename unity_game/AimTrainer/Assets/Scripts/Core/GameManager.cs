@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private ScoreManager scoreManager;
     [SerializeField] private TargetManager targetManager;
     [SerializeField] private Button buttonStart;
+    [SerializeField] private SessionRecorder sessionRecorder;
 
     private void Awake()
     {
@@ -17,13 +18,14 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         buttonStart.gameObject.SetActive(false);
-        scoreManager.resetScores();
+        sessionRecorder.StartSession(targetManager.MaxTargets, targetManager.TargetLifetimeSeconds);
         targetManager.StartGame();
     }
 
     public void EndGame()
     {
-        scoreManager.PrintResults();
+        sessionRecorder.DebugSession();
+        sessionRecorder.EndSession();
         buttonStart.gameObject.SetActive(true);
     }
 }
