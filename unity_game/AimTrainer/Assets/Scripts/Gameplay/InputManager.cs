@@ -7,6 +7,7 @@ public class InputManager : MonoBehaviour
     [SerializeField] private Camera mainCamera;
     [SerializeField] private float maxRayDistance = 100f;
     [SerializeField] private ScoreManager scoreManager;
+    [SerializeField] private GameManager gameManager;
 
     private void Awake()
     {
@@ -22,9 +23,12 @@ public class InputManager : MonoBehaviour
 
     private void Update()
     {
-        if (!Input.GetMouseButtonDown(0)) return;
+        if (gameManager.inGame)
+        {
+            if (!Input.GetMouseButtonDown(0)) return;
 
-        CheckMouseClick();
+            CheckMouseClick();
+        }
     }
 
     private void CheckMouseClick()

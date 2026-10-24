@@ -14,7 +14,7 @@ public class TargetManager : MonoBehaviour
     [SerializeField] private GameObject leftUp;
     [SerializeField] private GameObject rightDown;
     public int tagetsSpawned = 0;
-    static int maxTargets = 30;
+    public int maxTargets = 30;
 
     public event Action OnGameFinished;
 
@@ -105,6 +105,11 @@ public class TargetManager : MonoBehaviour
         }
 
         Destroy(target);
+    }
+
+    public void SetMaxTargets(int value)
+    {
+        maxTargets = value;
     }
 
     public void StartGame()
