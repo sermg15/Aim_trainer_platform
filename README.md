@@ -1,4 +1,6 @@
-# Aim_trainer_platform
+# Aim Trainer Platform
+
+## ¿Qué es Aim Trainer Platform?
 
 Proyecto desarrollado como Trabajo de Fin de Grado de Ingeniería de Computadores.
 
@@ -45,6 +47,8 @@ La estructura principal del repositorio es:
 Aim_trainer_platform/
 │
 ├── docs/
+│   └── images/
+│   └── unity.md
 ├── unity_game/
 │   └── AimTrainer/
 │       ├── Assets/
@@ -57,6 +61,8 @@ Aim_trainer_platform/
 ### `docs/`
 
 Contiene distintos archivos .md en los que se explican las funcionalidades, avances o estado actual de cada una de las partes del proyecto en el momento actual.
+
+También tiene una carpeta de imágenes relacionadas con la documentación, como esquemas o capturas importantes para la explicación.
 
 ### `unity_game/AimTrainer`
 
@@ -130,7 +136,7 @@ Ejemplo:
 feat: add initial main menu navigation
 ```
 
-## Ejecutar el MVP en Unity
+## Ejecutar el proyecto
 
 ### Requisitos
 
@@ -207,6 +213,14 @@ El proyecto sigue una metodología **iterativa e incremental**.
 Cada iteración introduce nuevas funcionalidades o mejoras sobre el estado anterior del sistema. Paralelamente se incorporan progresivamente prácticas DevOps y comprobaciones automáticas al proceso de integración.
 
 El objetivo es que cada incremento pueda ser probado y documentado antes de continuar con el siguiente.
+
+## Documentación técnica
+
+La documentación específica de cada componente se encuentra en la carpeta docs/.
+
+Actualmente disponible:
+
+- docs/unity.md
 
 ## Autor
 
