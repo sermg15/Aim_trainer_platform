@@ -8,7 +8,9 @@ Servirá como intermediario entre el usuario y la API de análisis que se crear�
 
 ## Estado actual
 
-Indicar que actualmente se trata de una demo prefuncional que utiliza datos dummy y que todavía no está conectada a un backend real.
+Actualmente la aplicación es una demo prefuncional que utiliza datos de prueba y no está conectada a un backend real.
+
+Su objetivo en esta fase es representar visualmente cómo podría presentarse al usuario el análisis de las sesiones y validar la idea general de la futura aplicación web.
 
 ## Funcionalidades de la demo
 
@@ -22,7 +24,13 @@ Indicar que actualmente se trata de una demo prefuncional que utiliza datos dumm
 
 ## Estructura del componente
 
-Explicar las carpetas y archivos principales de `web/`. De momento no se explica porque es una demo básica.
+El prototipo se encuentra en `web_app/` y utiliza HTML, CSS y JavaScript sin frameworks ni proceso de compilación.
+
+- `index.html`: estructura principal de la interfaz.
+- `styles.css`: estilos y diseño responsive.
+- `app.js`: carga, normalización, análisis y visualización de los datos.
+- `aim-trainer-example.json`: conjunto de datos de ejemplo utilizado por la demo.
+- `aim-trainer-template.csv`: ejemplo del formato CSV admitido.
 
 ## Ejecución local
 
