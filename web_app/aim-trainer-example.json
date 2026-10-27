@@ -1,0 +1,43 @@
+{
+  "sessions": [
+    {
+      "sessionId": "Partida 01",
+      "events": [
+        {"timestamp":"2026-09-10T18:00:01Z","eventType":"hit","reactionTimeMs":612,"targetX":0.18,"targetY":0.76,"clickX":0.20,"clickY":0.74},
+        {"timestamp":"2026-09-10T18:00:02Z","eventType":"hit","reactionTimeMs":570,"targetX":0.71,"targetY":0.62,"clickX":0.69,"clickY":0.60},
+        {"timestamp":"2026-09-10T18:00:03Z","eventType":"miss","reactionTimeMs":730,"targetX":0.83,"targetY":0.24,"clickX":0.76,"clickY":0.31},
+        {"timestamp":"2026-09-10T18:00:04Z","eventType":"hit","reactionTimeMs":520,"targetX":0.43,"targetY":0.82,"clickX":0.45,"clickY":0.80},
+        {"timestamp":"2026-09-10T18:00:05Z","eventType":"click","clickX":0.92,"clickY":0.52},
+        {"timestamp":"2026-09-10T18:00:06Z","eventType":"hit","reactionTimeMs":481,"targetX":0.55,"targetY":0.43,"clickX":0.56,"clickY":0.42},
+        {"timestamp":"2026-09-10T18:00:07Z","eventType":"miss","reactionTimeMs":690,"targetX":0.12,"targetY":0.30,"clickX":0.20,"clickY":0.35},
+        {"timestamp":"2026-09-10T18:00:08Z","eventType":"hit","reactionTimeMs":455,"targetX":0.64,"targetY":0.18,"clickX":0.63,"clickY":0.20}
+      ]
+    },
+    {
+      "sessionId": "Partida 02",
+      "events": [
+        {"timestamp":"2026-09-11T18:00:01Z","eventType":"hit","reactionTimeMs":510,"targetX":0.22,"targetY":0.72,"clickX":0.23,"clickY":0.71},
+        {"timestamp":"2026-09-11T18:00:02Z","eventType":"hit","reactionTimeMs":492,"targetX":0.68,"targetY":0.66,"clickX":0.67,"clickY":0.65},
+        {"timestamp":"2026-09-11T18:00:03Z","eventType":"hit","reactionTimeMs":470,"targetX":0.80,"targetY":0.28,"clickX":0.79,"clickY":0.29},
+        {"timestamp":"2026-09-11T18:00:04Z","eventType":"miss","reactionTimeMs":650,"targetX":0.40,"targetY":0.83,"clickX":0.48,"clickY":0.77},
+        {"timestamp":"2026-09-11T18:00:05Z","eventType":"hit","reactionTimeMs":438,"targetX":0.52,"targetY":0.46,"clickX":0.52,"clickY":0.45},
+        {"timestamp":"2026-09-11T18:00:06Z","eventType":"hit","reactionTimeMs":421,"targetX":0.17,"targetY":0.34,"clickX":0.18,"clickY":0.34},
+        {"timestamp":"2026-09-11T18:00:07Z","eventType":"click","clickX":0.91,"clickY":0.78},
+        {"timestamp":"2026-09-11T18:00:08Z","eventType":"hit","reactionTimeMs":405,"targetX":0.61,"targetY":0.21,"clickX":0.61,"clickY":0.22}
+      ]
+    },
+    {
+      "sessionId": "Partida 03",
+      "events": [
+        {"timestamp":"2026-09-12T18:00:01Z","eventType":"hit","reactionTimeMs":442,"targetX":0.26,"targetY":0.74,"clickX":0.26,"clickY":0.73},
+        {"timestamp":"2026-09-12T18:00:02Z","eventType":"hit","reactionTimeMs":418,"targetX":0.70,"targetY":0.62,"clickX":0.69,"clickY":0.62},
+        {"timestamp":"2026-09-12T18:00:03Z","eventType":"hit","reactionTimeMs":391,"targetX":0.82,"targetY":0.25,"clickX":0.81,"clickY":0.26},
+        {"timestamp":"2026-09-12T18:00:04Z","eventType":"hit","reactionTimeMs":405,"targetX":0.43,"targetY":0.81,"clickX":0.43,"clickY":0.79},
+        {"timestamp":"2026-09-12T18:00:05Z","eventType":"miss","reactionTimeMs":590,"targetX":0.53,"targetY":0.43,"clickX":0.59,"clickY":0.47},
+        {"timestamp":"2026-09-12T18:00:06Z","eventType":"hit","reactionTimeMs":380,"targetX":0.15,"targetY":0.31,"clickX":0.16,"clickY":0.31},
+        {"timestamp":"2026-09-12T18:00:07Z","eventType":"hit","reactionTimeMs":372,"targetX":0.62,"targetY":0.18,"clickX":0.62,"clickY":0.19},
+        {"timestamp":"2026-09-12T18:00:08Z","eventType":"hit","reactionTimeMs":360,"targetX":0.49,"targetY":0.54,"clickX":0.49,"clickY":0.54}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+sessionId,timestamp,eventType,reactionTimeMs,targetX,targetY,clickX,clickY
+Partida_001,2026-09-14T18:00:00Z,hit,412,0.25,0.72,0.26,0.70
+Partida_001,2026-09-14T18:00:01Z,miss,,0.78,0.34,0.70,0.39
+Partida_001,2026-09-14T18:00:02Z,click,,,,-0.15,0.22

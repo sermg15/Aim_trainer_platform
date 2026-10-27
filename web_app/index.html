@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#090c11" />
+  <title>AimTrainerPlatform Analytics</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="shell"> 
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Inicio">
+        <span class="brand-mark" aria-hidden="true"><i></i></span>
+        <span><b>AIMTRAINERPLATFORM</b><small>ANALYTICS</small></span>
+      </a>
+      <div class="top-actions">
+        <span class="local-pill"><i></i> Procesamiento local</span>
+        <button id="themeButton" class="icon-button" type="button" aria-label="Cambiar tema">◐</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero-panel" aria-labelledby="pageTitle">
+        <div class="hero-copy">
+          <p class="eyebrow">PANEL DE RENDIMIENTO</p>
+          <h1 id="pageTitle">Tus partidas, bajo la mira.</h1>
+          <p>Carga los registros de Unity y convierte cada clic en una decisión útil. Los archivos se analizan únicamente en este navegador.</p>
+        </div>
+        <div class="import-zone" id="dropZone">
+          <input id="fileInput" type="file" accept=".csv,.json,text/csv,application/json" multiple hidden />
+          <div class="upload-icon" aria-hidden="true">↥</div>
+          <div>
+            <strong>Suelta aquí tus registros</strong>
+            <span>CSV o JSON · uno o varios archivos</span>
+          </div>
+          <button class="primary-button" id="selectFiles" type="button">Seleccionar archivos</button>
+          <button class="text-button" id="loadDemo" type="button">Usar datos de ejemplo</button>
+        </div>
+        <div class="toolbar" id="toolbar">
+          <label>
+            <span>Partidas visibles</span>
+            <select id="sessionFilter" aria-label="Seleccionar partidas"></select>
+          </label>
+          <label>
+            <span>Comparar con</span>
+            <select id="compareSelect" aria-label="Partida de comparación">
+              <option value="">Anterior</option>
+            </select>
+          </label>
+          <label>
+            <span>Evento</span>
+            <select id="eventFilter" aria-label="Filtrar por evento">
+              <option value="all">Todos</option>
+              <option value="hit">Aciertos</option>
+              <option value="miss">Errores</option>
+              <option value="click">Clics vacíos</option>
+            </select>
+          </label>
+          <button class="secondary-button" id="clearData" type="button">Limpiar datos</button>
+        </div>
+        <div class="status" id="status" role="status" aria-live="polite"></div>
+      </section>
+
+      <section class="analytics-section" aria-labelledby="overviewTitle">
+        <div class="section-heading">
+          <div><p class="eyebrow">RESUMEN</p><h2 id="overviewTitle">Rendimiento actual</h2></div>
+          <span id="activeRange" class="range-label"></span>
+        </div>
+        <div class="metric-grid" id="metricGrid"></div>
+        <div class="chart-grid">
+          <article class="card chart-card wide">
+            <div class="card-heading">
+              <div><span class="card-kicker">EVOLUCIÓN</span><h3>Precisión y reacción</h3></div>
+              <div class="legend"><span><i class="dot cyan"></i>Precisión</span><span><i class="dot violet"></i>Reacción</span></div>
+            </div>
+            <div id="evolutionChart" class="chart" aria-label="Gráfica de evolución por partida"></div>
+          </article>
+          <article class="card chart-card">
+            <div class="card-heading"><div><span class="card-kicker">DISTRIBUCIÓN</span><h3>Resultado de los clics</h3></div></div>
+            <div id="outcomeChart" class="donut-wrap"></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="detail-section" aria-labelledby="detailTitle">
+        <div class="section-heading">
+          <div><p class="eyebrow">DIAGNÓSTICO</p><h2 id="detailTitle">Dónde ganas y pierdes tiempo</h2></div>
+        </div>
+        <div class="detail-grid">
+          <article class="card heatmap-card">
+            <div class="card-heading">
+              <div><span class="card-kicker">POSICIONES NORMALIZADAS</span><h3>Mapa de impactos</h3></div>
+              <div class="legend"><span><i class="dot cyan"></i>Acierto</span><span><i class="dot red"></i>Error</span></div>
+            </div>
+            <div id="positionMap" class="position-map" aria-label="Mapa de posiciones de los eventos"></div>
+          </article>
+          <article class="card table-card">
+            <div class="card-heading">
+              <div><span class="card-kicker">EVENTOS</span><h3>Últimos registros</h3></div>
+              <button id="exportButton" class="text-button" type="button">Exportar vista</button>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Partida</th><th>Tipo</th><th>Reacción</th><th>Posición</th></tr></thead>
+                <tbody id="eventTable"></tbody>
+              </table>
+            </div>
+          </article>
+        </div>
+        <details class="format-help">
+          <summary>Formato de registro compatible</summary>
+          <p>Una fila por evento. Campos recomendados: <code>sessionId</code>, <code>timestamp</code>, <code>eventType</code>, <code>reactionTimeMs</code>, <code>targetX</code>, <code>targetY</code>, <code>clickX</code> y <code>clickY</code>. También se reconocen nombres equivalentes en español.</p>
+          <div><a href="./aim-trainer-template.csv" download>Descargar plantilla CSV</a><a href="./aim-trainer-example.json" download>Descargar ejemplo JSON</a></div>
+        </details>
+      </section>
+    </main>
+    <footer><span>AimTrainerPlatform Analytics · Demo web</span><span>Los datos permanecen en tu dispositivo</span></footer>
+  </div>
+  <script src="./app.js" defer></script>
+</body>
+</html>

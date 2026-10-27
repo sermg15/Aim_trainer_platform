@@ -49,12 +49,16 @@ Aim_trainer_platform/
 ├── docs/
 │   └── images/
 │   └── unity.md
+│   └── web_app.md
+|
 ├── unity_game/
 │   └── AimTrainer/
 │       ├── Assets/
 │       ├── Packages/
 │       └── ProjectSettings/
 │
+├── web_app/
+|
 ├── .gitignore
 └── README.md
 ```
@@ -220,7 +224,8 @@ La documentación específica de cada componente se encuentra en la carpeta docs
 
 Actualmente disponible:
 
-- docs/unity.md
+- [Unity](docs/unity.md)
+- [Aplicación web](docs/web_app.md)
 
 ## Autor
 
