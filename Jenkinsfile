@@ -58,7 +58,6 @@ pipeline {
         stage('Build information') {
             steps {
                 sh '''
-                    echo "Branch: $(git branch --show-current)"
                     echo "Commit: $(git rev-parse --short HEAD)"
                     echo "Message: $(git log -1 --pretty=%s)"
                 '''
