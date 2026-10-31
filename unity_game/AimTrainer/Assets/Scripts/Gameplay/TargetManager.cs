@@ -8,13 +8,15 @@ using Random = UnityEngine.Random;
 public class TargetManager : MonoBehaviour
 {
     [SerializeField] private GameObject targetPrefab;
-    private List<GameObject> activeTargets = new List<GameObject>();
-    private float maxLifetime = 1.5f; // Maximum lifetime of a target in seconds
     [SerializeField] private ScoreManager scoreManager;
     [SerializeField] private GameObject leftUp;
     [SerializeField] private GameObject rightDown;
-    public int tagetsSpawned = 0;
+    [SerializeField] private SessionRecorder sessionRecorder;
+
+    private List<GameObject> activeTargets = new List<GameObject>();
+    public int targetId = 0;
     public int maxTargets = 30;
+    public float maxLifetime = 1.5f;
 
     public event Action OnGameFinished;
 
@@ -48,7 +50,11 @@ public class TargetManager : MonoBehaviour
             // Suscribimos con métodos nombrados para poder desuscribirlos después
             targetComponent.OnExpired += HandleTargetExpired;
             targetComponent.OnHit += HandleTargetClicked;
-            targetComponent.InitializeTarget();
+
+            int newTargetId = targetId;
+            Vector3 viewportPosition = Camera.main.WorldToViewportPoint(position);
+            targetComponent.InitializeTarget(newTargetId, maxLifetime);
+            sessionRecorder.RegisterTarget(newTargetId, viewportPosition);
         }
         else
         {
@@ -58,7 +64,7 @@ public class TargetManager : MonoBehaviour
 
     public void SpawnNextTarget()
     {
-        if (tagetsSpawned >= maxTargets)
+        if (targetId >= maxTargets)
         {
             Debug.Log("Max targets reached. Ending game.");
             OnGameFinished?.Invoke();
@@ -66,12 +72,13 @@ public class TargetManager : MonoBehaviour
         }
 
         SpawnTarget(calculateTargetPosition());
-        tagetsSpawned++;
+        targetId++;
     }
 
     private void HandleTargetClicked(Target t)
     {
-        scoreManager.RegisterHit();
+        //scoreManager.RegisterHit();
+        sessionRecorder.RegisterHit(t.TargetId);
 
         RemoveTarget(t.gameObject);
 
@@ -80,7 +87,8 @@ public class TargetManager : MonoBehaviour
 
     private void HandleTargetExpired(Target t)
     {
-        scoreManager.RegisterMiss();
+        //scoreManager.RegisterMiss();
+        sessionRecorder.RegisterTimeout(t.TargetId);
 
         RemoveTarget(t.gameObject);
 
@@ -114,7 +122,7 @@ public class TargetManager : MonoBehaviour
 
     public void StartGame()
     {
-        tagetsSpawned = 0;
+        targetId = 0;
         SpawnNextTarget();
     }
 }
