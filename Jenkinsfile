@@ -63,6 +63,12 @@ pipeline {
                 '''
             }
         }
+
+        stage('Validate JSON') {
+            steps {
+                sh 'python3 DevOps/json-validation/validate_json.py'
+            }
+        }
     }
 
     post {
