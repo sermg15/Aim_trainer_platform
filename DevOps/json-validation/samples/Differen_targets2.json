@@ -1,0 +1,360 @@
+{
+  "schemaVersion": "1.0",
+  "sessionId": "20261102_174347_232",
+  "playerId": "TestPlayer",
+  "timestamp": "2026-11-02T17:43:47.2320206Z",
+  "maxTargets": 20,
+  "targetLifetimeSeconds": 1.5,
+  "targets": [
+    {
+      "targetId": 0,
+      "spawnTimeMs": 0.450134277,
+      "despawnTimeMs": 1016.97156,
+      "targetX": 0.189842492,
+      "targetY": 0.418402553,
+      "result": "hit",
+      "reactionTimeMs": 1016.52142
+    },
+    {
+      "targetId": 1,
+      "spawnTimeMs": 1017.11658,
+      "despawnTimeMs": 1615.99927,
+      "targetX": 0.6698934,
+      "targetY": 0.8334836,
+      "result": "hit",
+      "reactionTimeMs": 598.8827
+    },
+    {
+      "targetId": 2,
+      "spawnTimeMs": 1616.15369,
+      "despawnTimeMs": 2267.91,
+      "targetX": 0.196567386,
+      "targetY": 0.9242586,
+      "result": "hit",
+      "reactionTimeMs": 651.7562
+    },
+    {
+      "targetId": 3,
+      "spawnTimeMs": 2268.04736,
+      "despawnTimeMs": 2933.90283,
+      "targetX": 0.7089725,
+      "targetY": 0.485353261,
+      "result": "hit",
+      "reactionTimeMs": 665.855469
+    },
+    {
+      "targetId": 4,
+      "spawnTimeMs": 2934.046,
+      "despawnTimeMs": 3595.65723,
+      "targetX": 0.380721956,
+      "targetY": 0.4492957,
+      "result": "hit",
+      "reactionTimeMs": 661.6113
+    },
+    {
+      "targetId": 5,
+      "spawnTimeMs": 3595.79663,
+      "despawnTimeMs": 4165.94873,
+      "targetX": 0.678748548,
+      "targetY": 0.381464422,
+      "result": "hit",
+      "reactionTimeMs": 570.1521
+    },
+    {
+      "targetId": 6,
+      "spawnTimeMs": 4166.092,
+      "despawnTimeMs": 5529.104,
+      "targetX": 0.056068778,
+      "targetY": 0.6436592,
+      "result": "hit",
+      "reactionTimeMs": 1363.01221
+    },
+    {
+      "targetId": 7,
+      "spawnTimeMs": 5529.2627,
+      "despawnTimeMs": 6243.3374,
+      "targetX": 0.673105,
+      "targetY": 0.23267737,
+      "result": "hit",
+      "reactionTimeMs": 714.0747
+    },
+    {
+      "targetId": 8,
+      "spawnTimeMs": 6243.48438,
+      "despawnTimeMs": 6839.712,
+      "targetX": 0.7866765,
+      "targetY": 0.105288178,
+      "result": "hit",
+      "reactionTimeMs": 596.227539
+    },
+    {
+      "targetId": 9,
+      "spawnTimeMs": 6839.857,
+      "despawnTimeMs": 7360.014,
+      "targetX": 0.4759095,
+      "targetY": 0.109291941,
+      "result": "hit",
+      "reactionTimeMs": 520.1572
+    },
+    {
+      "targetId": 10,
+      "spawnTimeMs": 7360.17432,
+      "despawnTimeMs": 7834.198,
+      "targetX": 0.385235,
+      "targetY": 0.472792864,
+      "result": "hit",
+      "reactionTimeMs": 474.023926
+    },
+    {
+      "targetId": 11,
+      "spawnTimeMs": 7834.33545,
+      "despawnTimeMs": 8390.915,
+      "targetX": 0.812613845,
+      "targetY": 0.139965475,
+      "result": "hit",
+      "reactionTimeMs": 556.5796
+    },
+    {
+      "targetId": 12,
+      "spawnTimeMs": 8391.056,
+      "despawnTimeMs": 9054.712,
+      "targetX": 0.13784194,
+      "targetY": 0.7544508,
+      "result": "hit",
+      "reactionTimeMs": 663.65625
+    },
+    {
+      "targetId": 13,
+      "spawnTimeMs": 9054.89551,
+      "despawnTimeMs": 9621.008,
+      "targetX": 0.419846177,
+      "targetY": 0.6297047,
+      "result": "hit",
+      "reactionTimeMs": 566.1123
+    },
+    {
+      "targetId": 14,
+      "spawnTimeMs": 9621.147,
+      "despawnTimeMs": 10312.9883,
+      "targetX": 0.6861093,
+      "targetY": 0.09602043,
+      "result": "hit",
+      "reactionTimeMs": 691.8408
+    },
+    {
+      "targetId": 15,
+      "spawnTimeMs": 10313.15,
+      "despawnTimeMs": 11462.1738,
+      "targetX": 0.04426578,
+      "targetY": 0.330216318,
+      "result": "hit",
+      "reactionTimeMs": 1149.02344
+    },
+    {
+      "targetId": 16,
+      "spawnTimeMs": 11462.3164,
+      "despawnTimeMs": 12622.8545,
+      "targetX": 0.8342214,
+      "targetY": 0.156586945,
+      "result": "hit",
+      "reactionTimeMs": 1160.53809
+    },
+    {
+      "targetId": 17,
+      "spawnTimeMs": 12622.9932,
+      "despawnTimeMs": 13133.5088,
+      "targetX": 0.8005465,
+      "targetY": 0.401388228,
+      "result": "hit",
+      "reactionTimeMs": 510.515625
+    },
+    {
+      "targetId": 18,
+      "spawnTimeMs": 13133.6494,
+      "despawnTimeMs": 13697.1719,
+      "targetX": 0.732713342,
+      "targetY": 0.395454675,
+      "result": "hit",
+      "reactionTimeMs": 563.522461
+    },
+    {
+      "targetId": 19,
+      "spawnTimeMs": 13697.3174,
+      "despawnTimeMs": 14381.1055,
+      "targetX": 0.867004335,
+      "targetY": 0.602738738,
+      "result": "hit",
+      "reactionTimeMs": 683.7881
+    }
+  ],
+  "clicks": [
+    {
+      "timeMs": 1016.82666,
+      "posX": 0.207174614,
+      "posY": 0.442714125,
+      "hit": true,
+      "targetId": 0
+    },
+    {
+      "timeMs": 1615.858,
+      "posX": 0.6451613,
+      "posY": 0.79532814,
+      "hit": true,
+      "targetId": 1
+    },
+    {
+      "timeMs": 2267.77466,
+      "posX": 0.190906554,
+      "posY": 0.9110123,
+      "hit": true,
+      "targetId": 2
+    },
+    {
+      "timeMs": 2933.76343,
+      "posX": 0.7020995,
+      "posY": 0.45161292,
+      "hit": true,
+      "targetId": 3
+    },
+    {
+      "timeMs": 3595.52,
+      "posX": 0.379866481,
+      "posY": 0.419354856,
+      "hit": true,
+      "targetId": 4
+    },
+    {
+      "timeMs": 4165.81152,
+      "posX": 0.6595522,
+      "posY": 0.37931034,
+      "hit": true,
+      "targetId": 5
+    },
+    {
+      "timeMs": 4901.7334,
+      "posX": 0.0964265838,
+      "posY": 0.6585095,
+      "hit": false,
+      "targetId": null
+    },
+    {
+      "timeMs": 5241.238,
+      "posX": 0.0914210156,
+      "posY": 0.6596218,
+      "hit": false,
+      "targetId": null
+    },
+    {
+      "timeMs": 5528.95557,
+      "posX": 0.06889599,
+      "posY": 0.655172467,
+      "hit": true,
+      "targetId": 6
+    },
+    {
+      "timeMs": 6243.19629,
+      "posX": 0.6758203,
+      "posY": 0.221357062,
+      "hit": true,
+      "targetId": 7
+    },
+    {
+      "timeMs": 6839.571,
+      "posX": 0.795953751,
+      "posY": 0.09788655,
+      "hit": true,
+      "targetId": 8
+    },
+    {
+      "timeMs": 7359.869,
+      "posX": 0.486860335,
+      "posY": 0.104560629,
+      "hit": true,
+      "targetId": 9
+    },
+    {
+      "timeMs": 7834.05859,
+      "posX": 0.378615081,
+      "posY": 0.5005562,
+      "hit": true,
+      "targetId": 10
+    },
+    {
+      "timeMs": 8390.763,
+      "posX": 0.8065906,
+      "posY": 0.106785312,
+      "hit": true,
+      "targetId": 11
+    },
+    {
+      "timeMs": 9054.575,
+      "posX": 0.135219678,
+      "posY": 0.72302556,
+      "hit": true,
+      "targetId": 12
+    },
+    {
+      "timeMs": 9620.87,
+      "posX": 0.4130283,
+      "posY": 0.647386,
+      "hit": true,
+      "targetId": 13
+    },
+    {
+      "timeMs": 10312.834,
+      "posX": 0.6714404,
+      "posY": 0.104560629,
+      "hit": true,
+      "targetId": 14
+    },
+    {
+      "timeMs": 11065.1631,
+      "posX": 0.07515295,
+      "posY": 0.353726357,
+      "hit": false,
+      "targetId": null
+    },
+    {
+      "timeMs": 11462.0381,
+      "posX": 0.0438681841,
+      "posY": 0.337041169,
+      "hit": true,
+      "targetId": 15
+    },
+    {
+      "timeMs": 12231.0547,
+      "posX": 0.804087758,
+      "posY": 0.150166854,
+      "hit": false,
+      "targetId": null
+    },
+    {
+      "timeMs": 12622.7188,
+      "posX": 0.822232962,
+      "posY": 0.167964414,
+      "hit": true,
+      "targetId": 16
+    },
+    {
+      "timeMs": 13133.3652,
+      "posX": 0.800959349,
+      "posY": 0.364849836,
+      "hit": true,
+      "targetId": 17
+    },
+    {
+      "timeMs": 13697.0313,
+      "posX": 0.707105041,
+      "posY": 0.370411575,
+      "hit": true,
+      "targetId": 18
+    },
+    {
+      "timeMs": 14380.9609,
+      "posX": 0.852892,
+      "posY": 0.571746349,
+      "hit": true,
+      "targetId": 19
+    }
+  ]
+}
