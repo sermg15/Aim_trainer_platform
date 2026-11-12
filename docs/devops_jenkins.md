@@ -115,7 +115,8 @@ Esto permite separar dos objetivos:
 Se ampliará el pipeline para:
 
 - ejecutarse automáticamente ante cambios relevantes;
-- validar el contrato y estructura de los datos JSON generados por Unity.
+- validar el contrato y estructura de los datos JSON generados por Unity,
+- instalar los paquetes necesarios para la ejecución del script de python que realiza dicha valicación. 
 
 ### Iteración 2
 
