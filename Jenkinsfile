@@ -66,7 +66,16 @@ pipeline {
 
         stage('Validate JSON') {
             steps {
-                sh 'python3 DevOps/json-validation/validate_json.py'
+                sh '''
+                    rm -rf .venv-json-validation
+
+                    python3 -m venv .venv-json-validation
+                    . .venv-json-validation/bin/activate
+
+                    python -m pip install -r DevOps/json-validation/requirements.txt
+
+                    python DevOps/json-validation/validate_json.py
+                '''
             }
         }
     }
