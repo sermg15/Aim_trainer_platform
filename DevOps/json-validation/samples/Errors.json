@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "sessionId": "20261031_020730_254",
   "playerId": "TestPlayer",
-  "timestamp": "2026-10-31T02:07:30.2568038Z",
+  "timestamp": "2027-10-31T02:07:30.2568038Z",
   "maxTargets": 10,
   "targetLifetimeSeconds": 1.5,
   "targets": [
@@ -89,15 +89,6 @@
     },
     {
       "targetId": 9,
-      "spawnTimeMs": 9286.603,
-      "despawnTimeMs": 10081.0625,
-      "targetX": 0.9307109,
-      "targetY": 0.170919836,
-      "result": "hit",
-      "reactionTimeMs": 794.459961
-    },
-    {
-      "targetId": 10,
       "spawnTimeMs": 9286.603,
       "despawnTimeMs": 10081.0625,
       "targetX": 0.9307109,
