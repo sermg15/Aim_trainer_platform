@@ -1,0 +1,263 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "session1.schema.json",
+  "title": "Aim Trainer Session 1.0",
+  "description": "Contrato de datos para una sesión de Aim Trainer - schemaVersion 1.0",
+
+  "type": "object",
+  "additionalProperties": false,
+
+  "required": [
+    "schemaVersion",
+    "sessionId",
+    "playerId",
+    "timestamp",
+    "maxTargets",
+    "targetLifetimeSeconds",
+    "targets",
+    "clicks"
+  ],
+
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1.0"
+    },
+
+    "sessionId": {
+      "type": "string",
+      "pattern": "^[0-9]{8}_[0-9]{6}_[0-9]{3}$"
+    },
+
+    "playerId": {
+      "type": "string",
+      "minLength": 1
+    },
+
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+
+    "maxTargets": {
+      "type": "integer",
+      "minimum": 10
+    },
+
+    "targetLifetimeSeconds": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+
+    "targets": {
+      "type": "array",
+      "minItems": 10,
+      "items": {
+        "$ref": "#/$defs/target"
+      }
+    },
+
+    "clicks": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/click"
+      }
+    }
+  },
+
+  "$defs": {
+    "target": {
+      "type": "object",
+      "additionalProperties": false,
+
+      "required": [
+        "targetId",
+        "spawnTimeMs",
+        "despawnTimeMs",
+        "targetX",
+        "targetY",
+        "result",
+        "reactionTimeMs"
+      ],
+
+      "properties": {
+        "targetId": {
+          "type": "integer",
+          "minimum": 0
+        },
+
+        "spawnTimeMs": {
+          "type": "number",
+          "minimum": 0
+        },
+
+        "despawnTimeMs": {
+          "type": "number",
+          "minimum": 0
+        },
+
+        "targetX": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+
+        "targetY": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+
+        "result": {
+          "type": "string",
+          "enum": [
+            "hit",
+            "timeout"
+          ]
+        },
+
+        "reactionTimeMs": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        }
+      },
+
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "result": {
+                "const": "hit"
+              }
+            },
+            "required": [
+              "result"
+            ]
+          },
+
+          "then": {
+            "properties": {
+              "reactionTimeMs": {
+                "type": "number",
+                "minimum": 0
+              }
+            }
+          }
+        },
+
+        {
+          "if": {
+            "properties": {
+              "result": {
+                "const": "timeout"
+              }
+            },
+            "required": [
+              "result"
+            ]
+          },
+
+          "then": {
+            "properties": {
+              "reactionTimeMs": {
+                "type": "null"
+              }
+            }
+          }
+        }
+      ]
+    },
+
+    "click": {
+      "type": "object",
+      "additionalProperties": false,
+
+      "required": [
+        "timeMs",
+        "posX",
+        "posY",
+        "hit",
+        "targetId"
+      ],
+
+      "properties": {
+        "timeMs": {
+          "type": "number",
+          "minimum": 0
+        },
+
+        "posX": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+
+        "posY": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+
+        "hit": {
+          "type": "boolean"
+        },
+
+        "targetId": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        }
+      },
+
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "hit": {
+                "const": false
+              }
+            },
+            "required": [
+              "hit"
+            ]
+          },
+
+          "then": {
+            "properties": {
+              "targetId": {
+                "type": "null"
+              }
+            }
+          }
+        },
+
+        {
+          "if": {
+            "properties": {
+              "hit": {
+                "const": true
+              }
+            },
+            "required": [
+              "hit"
+            ]
+          },
+
+          "then": {
+            "properties": {
+              "targetId": {
+                "type": "integer",
+                "minimum": 0
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

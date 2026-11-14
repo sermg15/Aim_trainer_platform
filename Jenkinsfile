@@ -63,6 +63,15 @@ pipeline {
                 '''
             }
         }
+
+        stage('Validate JSON') {
+            steps {
+                sh '''
+                    /opt/json-validator-venv/bin/python \
+                    DevOps/json-validation/validate_json.py
+                '''
+            }
+        }
     }
 
     post {
