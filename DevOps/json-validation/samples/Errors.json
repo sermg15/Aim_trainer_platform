@@ -57,8 +57,8 @@
       "despawnTimeMs": 6586.035,
       "targetX": 0.264329672,
       "targetY": 0.451644361,
-      "result": "missing",
-      "reactionTimeMs": 770.0176
+      "result": "hit",
+      "reactionTimeMs": null
     },
     {
       "targetId": 6,
