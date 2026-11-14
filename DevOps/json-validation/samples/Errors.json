@@ -39,8 +39,8 @@
       "despawnTimeMs": 4316.4165,
       "targetX": 0.423797071,
       "targetY": 0.524569,
-      "result": "hit",
-      "reactionTimeMs": 1469.167
+      "result": "timeout",
+      "reactionTimeMs": null
     },
     {
       "targetId": 4,
@@ -116,7 +116,7 @@
       "timeMs": 3664.97949,
       "posX": 0.5800889,
       "posY": 0.3003337,
-      "hit": true,
+      "hit": false,
       "targetId": null
     },
     {
