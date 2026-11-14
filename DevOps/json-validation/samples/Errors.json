@@ -116,7 +116,7 @@
       "timeMs": 3664.97949,
       "posX": 0.5800889,
       "posY": 0.3003337,
-      "hit": true,
+      "hit": false,
       "targetId": null
     },
     {
@@ -131,7 +131,7 @@
       "posX": 0.443687379,
       "posY": 0.484983325,
       "hit": false,
-      "targetId": null
+      "targetId": 4
     },
     {
       "timeMs": 5137.927,
