@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "sessionId": "20261031_020730_254",
   "playerId": "TestPlayer",
-  "timestamp": "2027-10-31T02:07:30.2568038Z",
+  "timestamp": "2026-10-31T02:07:30.2568038Z",
   "maxTargets": 10,
   "targetLifetimeSeconds": 1.5,
   "targets": [
@@ -16,7 +16,7 @@
       "reactionTimeMs": 770.921265
     },
     {
-      "targetId": 1,
+      "targetId": 0,
       "spawnTimeMs": 772.8677,
       "despawnTimeMs": 1347.97424,
       "targetX": 0.5190186,
