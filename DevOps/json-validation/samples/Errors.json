@@ -7,7 +7,7 @@
   "targetLifetimeSeconds": 1.5,
   "targets": [
     {
-      "targetId": 0.2,
+      "targetId": 0,
       "spawnTimeMs": 1.59645081,
       "despawnTimeMs": 772.5177,
       "targetX": 0.6427155,
@@ -37,7 +37,7 @@
       "targetId": 3,
       "spawnTimeMs": 2847.24951,
       "despawnTimeMs": 4316.4165,
-      "targetX": 0.423797071,
+      "targetX": 1.423797071,
       "targetY": 0.524569,
       "result": "hit",
       "reactionTimeMs": 1469.167
