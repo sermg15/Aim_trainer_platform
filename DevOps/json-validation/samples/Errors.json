@@ -58,7 +58,7 @@
       "targetX": 0.264329672,
       "targetY": 0.451644361,
       "result": "hit",
-      "reactionTimeMs": 570.0176
+      "reactionTimeMs": 770.0176
     },
     {
       "targetId": 6,
@@ -106,7 +106,7 @@
       "targetId": 0
     },
     {
-      "timeMs": 1347.81982,
+      "timeMs": 347.81982,
       "posX": 0.5281562,
       "posY": 0.73526144,
       "hit": true,
