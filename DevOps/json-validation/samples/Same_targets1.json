@@ -1,0 +1,179 @@
+{
+  "schemaVersion": "1.0",
+  "sessionId": "20261102_185209_020",
+  "playerId": "TestPlayer",
+  "timestamp": "2026-11-02T18:52:09.0231315Z",
+  "maxTargets": 10,
+  "targetLifetimeSeconds": 1.5,
+  "targets": [
+    {
+      "targetId": 0,
+      "spawnTimeMs": 1.63936615,
+      "despawnTimeMs": 1496.57056,
+      "targetX": 0.160281315,
+      "targetY": 0.431916237,
+      "result": "timeout",
+      "reactionTimeMs": null
+    },
+    {
+      "targetId": 1,
+      "spawnTimeMs": 1496.98682,
+      "despawnTimeMs": 2996.397,
+      "targetX": 0.7899061,
+      "targetY": 0.113838315,
+      "result": "timeout",
+      "reactionTimeMs": null
+    },
+    {
+      "targetId": 2,
+      "spawnTimeMs": 2996.642,
+      "despawnTimeMs": 3679.35571,
+      "targetX": 0.696880758,
+      "targetY": 0.900753,
+      "result": "hit",
+      "reactionTimeMs": 682.7136
+    },
+    {
+      "targetId": 3,
+      "spawnTimeMs": 3679.5415,
+      "despawnTimeMs": 4268.41162,
+      "targetX": 0.363483429,
+      "targetY": 0.838068962,
+      "result": "hit",
+      "reactionTimeMs": 588.8701
+    },
+    {
+      "targetId": 4,
+      "spawnTimeMs": 4268.568,
+      "despawnTimeMs": 4792.961,
+      "targetX": 0.4053072,
+      "targetY": 0.692866,
+      "result": "hit",
+      "reactionTimeMs": 524.393066
+    },
+    {
+      "targetId": 5,
+      "spawnTimeMs": 4793.126,
+      "despawnTimeMs": 5515.16455,
+      "targetX": 0.8781663,
+      "targetY": 0.193543613,
+      "result": "hit",
+      "reactionTimeMs": 722.0386
+    },
+    {
+      "targetId": 6,
+      "spawnTimeMs": 5515.32,
+      "despawnTimeMs": 6124.16846,
+      "targetX": 0.431774437,
+      "targetY": 0.5151208,
+      "result": "hit",
+      "reactionTimeMs": 608.848633
+    },
+    {
+      "targetId": 7,
+      "spawnTimeMs": 6124.32959,
+      "despawnTimeMs": 6787.2876,
+      "targetX": 0.566284835,
+      "targetY": 0.5847033,
+      "result": "hit",
+      "reactionTimeMs": 662.958
+    },
+    {
+      "targetId": 8,
+      "spawnTimeMs": 6787.43164,
+      "despawnTimeMs": 7677.9834,
+      "targetX": 0.9295672,
+      "targetY": 0.307026029,
+      "result": "hit",
+      "reactionTimeMs": 890.551758
+    },
+    {
+      "targetId": 9,
+      "spawnTimeMs": 7678.11963,
+      "despawnTimeMs": 8614.467,
+      "targetX": 0.214012489,
+      "targetY": 0.822166443,
+      "result": "hit",
+      "reactionTimeMs": 936.347168
+    }
+  ],
+  "clicks": [
+    {
+      "timeMs": 3678.92847,
+      "posX": 0.696468234,
+      "posY": 0.9098999,
+      "hit": true,
+      "targetId": 2
+    },
+    {
+      "timeMs": 4268.25244,
+      "posX": 0.345453233,
+      "posY": 0.874304831,
+      "hit": true,
+      "targetId": 3
+    },
+    {
+      "timeMs": 4792.81152,
+      "posX": 0.422413737,
+      "posY": 0.719688535,
+      "hit": true,
+      "targetId": 4
+    },
+    {
+      "timeMs": 5515.01367,
+      "posX": 0.88605386,
+      "posY": 0.181312576,
+      "hit": true,
+      "targetId": 5
+    },
+    {
+      "timeMs": 6124.01855,
+      "posX": 0.448067248,
+      "posY": 0.526140153,
+      "hit": true,
+      "targetId": 6
+    },
+    {
+      "timeMs": 6483.013,
+      "posX": 0.5788375,
+      "posY": 0.406006664,
+      "hit": false,
+      "targetId": null
+    },
+    {
+      "timeMs": 6787.136,
+      "posX": 0.578211844,
+      "posY": 0.5761958,
+      "hit": true,
+      "targetId": 7
+    },
+    {
+      "timeMs": 7189.44531,
+      "posX": 0.7064793,
+      "posY": 0.205784217,
+      "hit": false,
+      "targetId": null
+    },
+    {
+      "timeMs": 7677.85254,
+      "posX": 0.91671294,
+      "posY": 0.291434944,
+      "hit": true,
+      "targetId": 8
+    },
+    {
+      "timeMs": 8144.87744,
+      "posX": 0.304783046,
+      "posY": 0.6585095,
+      "hit": false,
+      "targetId": null
+    },
+    {
+      "timeMs": 8614.321,
+      "posX": 0.212180182,
+      "posY": 0.836485,
+      "hit": true,
+      "targetId": 9
+    }
+  ]
+}
