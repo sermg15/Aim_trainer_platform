@@ -58,7 +58,7 @@
       "targetX": 0.264329672,
       "targetY": 0.451644361,
       "result": "hit",
-      "reactionTimeMs": null
+      "reactionTimeMs": 770.0176
     },
     {
       "targetId": 6,
@@ -75,7 +75,7 @@
       "despawnTimeMs": 8734.57,
       "targetX": 0.161892712,
       "targetY": 0.579256356,
-      "result": "hit",
+      "result": "timeout",
       "reactionTimeMs": 648.5674
     },
     {
