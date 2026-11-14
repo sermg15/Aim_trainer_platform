@@ -12,19 +12,27 @@ El proyecto incorpora además prácticas y herramientas DevOps para organizar y 
 
 El proyecto se encuentra actualmente en desarrollo.
 
-La primera versión del componente Unity (tag `unity-v0.1.0`) corresponde a un MVP jugable que permite ejecutar el ciclo básico de una partida del Aim Trainer.
+La Iteración 1 incorpora la captura y exportación de datos reales de las
+sesiones del Aim Trainer, junto con su validación automática mediante un
+pipeline de integración continua.
 
-El desarrollo posterior incorporará de forma incremental:
+El componente Unity permite actualmente:
 
-- registro de datos de las sesiones;
-- exportación y validación de datos;
-- análisis mediante Python;
-- backend para procesar las sesiones;
-- aplicación web para visualizar resultados;
-- persistencia e histórico de partidas;
-- integración continua con Jenkins;
-- automatización de documentación;
-- contenerización y ejecución reproducible de los servicios.
+- ejecutar partidas configurables;
+- registrar información de sesión;
+- registrar targets, hits, timeouts y tiempos de reacción;
+- registrar clics acertados y fallidos;
+- exportar los datos de cada sesión en formato JSON.
+
+El proyecto dispone además de:
+
+- un contrato definido para los datos exportados;
+- validación estructural mediante JSON Schema;
+- validaciones adicionales de coherencia mediante Python;
+- ejemplos reales de sesiones;
+- Jenkins configurado como Multibranch Pipeline;
+- ejecución automática mediante webhooks de GitHub;
+- validación automática de los JSON dentro del pipeline.
 
 ## Tecnologías
 
@@ -32,10 +40,10 @@ Las principales tecnologías previstas o utilizadas en el proyecto son:
 
 - **Unity 2020.3.33f1** — desarrollo del Aim Trainer.
 - **C#** — lógica del videojuego.
-- **Python** — análisis de datos y backend.
+- **Python** — validación de datos, análisis y futuro backend.
 - **Jenkins** — integración continua y automatización.
 - **Git / GitHub** — control de versiones y gestión del desarrollo.
-- **Docker** — contenerización de servicios en fases posteriores.
+- **Docker / Docker Desktop** — ejecución reproducible del entorno Jenkins y futura contenerización de servicios.
 
 Las tecnologías correspondientes al backend, frontend y persistencia se concretarán durante las iteraciones en las que se desarrollen dichos componentes.
 
@@ -46,11 +54,19 @@ La estructura principal del repositorio es:
 ```text
 Aim_trainer_platform/
 │
+├── DevOps/
+│   └── json-validation/
+│       ├── samples/
+│       ├── session.schema.json
+│       ├── validate_json.py
+│       └── requirements.txt
+│
 ├── docs/
-│   └── images/
-│   └── unity.md
+│   ├── images/
+│   ├── devops_jenkins.md
+│   ├── unity.md
 │   └── web_app.md
-|
+│
 ├── unity_game/
 │   └── AimTrainer/
 │       ├── Assets/
@@ -58,7 +74,9 @@ Aim_trainer_platform/
 │       └── ProjectSettings/
 │
 ├── web_app/
-|
+│
+├── Dockerfile
+├── Jenkinsfile
 ├── .gitignore
 └── README.md
 ```
@@ -185,7 +203,11 @@ Una vez abierto el proyecto en Unity:
 5. Completar el ciclo de juego hasta que finalice la sesión.
 6. Es posible volver a iniciar una nueva partida al terminar.
 
-El MVP permite comprobar el funcionamiento básico del Aim Trainer antes de incorporar las funcionalidades de captura, análisis y persistencia de datos previstas en las siguientes iteraciones.
+Al finalizar una sesión, el juego registra los datos de la partida y genera
+un archivo JSON con la información de sesión, targets y clics.
+
+Los archivos seleccionados como casos de referencia pueden validarse mediante
+las herramientas disponibles en `DevOps/json-validation/`.
 
 ## Versionado
 
@@ -200,9 +222,16 @@ Ejemplos:
 ```text
 unity-v0.1.0
 unity-v0.2.0
+pipeline-v0.1.0
 backend-v0.1.0
 frontend-v0.1.0
 ```
+
+Los tags de componente se crean sobre el commit de `develop` en el que
+dicho componente queda integrado y validado.
+
+Los tags globales se crean sobre estados estables de `main` y representan
+una versión integrada de toda la plataforma.
 
 ### Versiones globales
 
@@ -225,6 +254,7 @@ La documentación específica de cada componente se encuentra en la carpeta docs
 Actualmente disponible:
 
 - [Unity](docs/unity.md)
+- [DevOps y Jenkins](docs/devops_jenkins.md)
 - [Aplicación web](docs/web_app.md)
 
 ## Autor
