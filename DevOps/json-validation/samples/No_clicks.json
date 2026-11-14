@@ -1,0 +1,101 @@
+{
+  "schemaVersion": "1.0",
+  "sessionId": "20261114_124821_454",
+  "playerId": "TestPlayer",
+  "timestamp": "2026-11-14T12:48:21.4575788Z",
+  "maxTargets": 10,
+  "targetLifetimeSeconds": 1.5,
+  "targets": [
+    {
+      "targetId": 0,
+      "spawnTimeMs": 1.6078949,
+      "despawnTimeMs": 1496.839,
+      "targetX": 0.6551725,
+      "targetY": 0.7831879,
+      "result": "timeout",
+      "reactionTimeMs": null
+    },
+    {
+      "targetId": 1,
+      "spawnTimeMs": 1497.31018,
+      "despawnTimeMs": 2997.05322,
+      "targetX": 0.516284,
+      "targetY": 0.269681454,
+      "result": "timeout",
+      "reactionTimeMs": null
+    },
+    {
+      "targetId": 2,
+      "spawnTimeMs": 2997.301,
+      "despawnTimeMs": 4497.303,
+      "targetX": 0.941414237,
+      "targetY": 0.9232609,
+      "result": "timeout",
+      "reactionTimeMs": null
+    },
+    {
+      "targetId": 3,
+      "spawnTimeMs": 4497.58252,
+      "despawnTimeMs": 5997.98,
+      "targetX": 0.4456894,
+      "targetY": 0.915807366,
+      "result": "timeout",
+      "reactionTimeMs": null
+    },
+    {
+      "targetId": 4,
+      "spawnTimeMs": 5998.194,
+      "despawnTimeMs": 7498.511,
+      "targetX": 0.468752444,
+      "targetY": 0.8354325,
+      "result": "timeout",
+      "reactionTimeMs": null
+    },
+    {
+      "targetId": 5,
+      "spawnTimeMs": 7498.7373,
+      "despawnTimeMs": 8998.957,
+      "targetX": 0.9344068,
+      "targetY": 0.120620221,
+      "result": "timeout",
+      "reactionTimeMs": null
+    },
+    {
+      "targetId": 6,
+      "spawnTimeMs": 8999.256,
+      "despawnTimeMs": 10499.5352,
+      "targetX": 0.4102887,
+      "targetY": 0.8561996,
+      "result": "timeout",
+      "reactionTimeMs": null
+    },
+    {
+      "targetId": 7,
+      "spawnTimeMs": 10499.793,
+      "despawnTimeMs": 11999.7051,
+      "targetX": 0.951838255,
+      "targetY": 0.119447976,
+      "result": "timeout",
+      "reactionTimeMs": null
+    },
+    {
+      "targetId": 8,
+      "spawnTimeMs": 11999.9609,
+      "despawnTimeMs": 13499.8789,
+      "targetX": 0.491348684,
+      "targetY": 0.7382438,
+      "result": "timeout",
+      "reactionTimeMs": null
+    },
+    {
+      "targetId": 9,
+      "spawnTimeMs": 13500.1787,
+      "despawnTimeMs": 15000.0234,
+      "targetX": 0.257104248,
+      "targetY": 0.509059966,
+      "result": "timeout",
+      "reactionTimeMs": null
+    }
+  ],
+  "clicks": []
+}
