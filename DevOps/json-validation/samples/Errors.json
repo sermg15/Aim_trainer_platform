@@ -37,7 +37,7 @@
       "targetId": 3,
       "spawnTimeMs": 2847.24951,
       "despawnTimeMs": 4316.4165,
-      "targetX": 1.423797071,
+      "targetX": 0.423797071,
       "targetY": 0.524569,
       "result": "hit",
       "reactionTimeMs": 1469.167
@@ -57,7 +57,7 @@
       "despawnTimeMs": 6586.035,
       "targetX": 0.264329672,
       "targetY": 0.451644361,
-      "result": "hit",
+      "result": "missing",
       "reactionTimeMs": 770.0176
     },
     {
