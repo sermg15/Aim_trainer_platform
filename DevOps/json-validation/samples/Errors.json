@@ -95,6 +95,15 @@
       "targetY": 0.170919836,
       "result": "hit",
       "reactionTimeMs": 794.459961
+    },
+    {
+      "targetId": 10,
+      "spawnTimeMs": 9286.603,
+      "despawnTimeMs": 10081.0625,
+      "targetX": 0.9307109,
+      "targetY": 0.170919836,
+      "result": "hit",
+      "reactionTimeMs": 794.459961
     }
   ],
   "clicks": [
@@ -131,7 +140,7 @@
       "posX": 0.443687379,
       "posY": 0.484983325,
       "hit": false,
-      "targetId": 4
+      "targetId": null
     },
     {
       "timeMs": 5137.927,
