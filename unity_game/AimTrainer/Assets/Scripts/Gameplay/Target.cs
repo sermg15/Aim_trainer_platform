@@ -6,17 +6,18 @@ using UnityEngine.UIElements;
 
 public class Target : MonoBehaviour
 {
-    [SerializeField] private float maxLifetime = 1.5f;
-    private float currentLifetime;
+    private float maxLifetime;
     private Coroutine lifeCoroutine;
     private bool alive;
-
     public event Action<Target> OnExpired;
     public event Action<Target> OnHit;
 
-    public void InitializeTarget(float? lifetime = null)
+    public int TargetId { get; private set; }
+
+    public void InitializeTarget(int targetId, float maxLifetime)
     {
-        if (lifetime.HasValue) maxLifetime = lifetime.Value;
+        TargetId = targetId;
+        this.maxLifetime = maxLifetime;
         if (lifeCoroutine != null) StopCoroutine(lifeCoroutine);
         lifeCoroutine = StartCoroutine(LifeCountdown());
     }

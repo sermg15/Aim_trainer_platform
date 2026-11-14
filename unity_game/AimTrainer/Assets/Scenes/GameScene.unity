@@ -444,6 +444,7 @@ MonoBehaviour:
   maxRayDistance: 100
   scoreManager: {fileID: 1288271375}
   gameManager: {fileID: 1746388498}
+  sessionRecorder: {fileID: 746138075}
 --- !u!1 &68449598
 GameObject:
   m_ObjectHideFlags: 0
@@ -2126,6 +2127,7 @@ Transform:
   - {fileID: 25277129}
   - {fileID: 864961341}
   - {fileID: 1563814291}
+  - {fileID: 746138076}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2861,6 +2863,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 742906050}
   m_CullTransparentMesh: 1
+--- !u!1 &746138074
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 746138076}
+  - component: {fileID: 746138075}
+  m_Layer: 0
+  m_Name: SessionRecorder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &746138075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746138074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f375f5ee4dd0634488ae2610abe2cb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &746138076
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746138074}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 633474949}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &800408568
 GameObject:
   m_ObjectHideFlags: 0
@@ -3012,8 +3057,10 @@ MonoBehaviour:
   scoreManager: {fileID: 1288271375}
   leftUp: {fileID: 1080771687}
   rightDown: {fileID: 266239785}
-  tagetsSpawned: 0
+  sessionRecorder: {fileID: 746138075}
+  targetId: 0
   maxTargets: 30
+  maxLifetime: 1.5
 --- !u!1 &906297269
 GameObject:
   m_ObjectHideFlags: 0
@@ -5540,6 +5587,7 @@ MonoBehaviour:
   scoreManager: {fileID: 1288271375}
   targetManager: {fileID: 864961342}
   settingsMenu: {fileID: 640701883}
+  sessionRecorder: {fileID: 746138075}
   inGame: 0
 --- !u!1 &1754521763
 GameObject:
