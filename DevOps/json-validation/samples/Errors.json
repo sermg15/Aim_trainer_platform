@@ -100,11 +100,13 @@
   "clicks": [
     {
       "timeMs": 771.9674,
+      "posX": 0.6489154,
       "posY": 0.460511684,
       "hit": true,
       "targetId": 0
     },
     {
+      "clickId": 1,
       "timeMs": 1347.81982,
       "posX": 0.5281562,
       "posY": 0.73526144,
