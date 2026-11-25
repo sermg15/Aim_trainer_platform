@@ -76,8 +76,15 @@ def get_changed_files(base, head):
 
     return files
 
-def get_diff(base, head):
+def get_diff(base, head, include_diff=False):
     """Obtiene el diff filtrando archivos generados."""
+    if not include_diff:
+        return {
+            "summary": "",
+            "content": "",
+            "truncated": False
+        }
+    
     content = run_git(
         "diff",
         "--no-ext-diff",
@@ -115,13 +122,13 @@ def extract_task_ids(commits):
     return sorted(set(task.upper() for task in task_ids))
 
 
-def generate_context(base_ref, head_ref):
+def generate_context(base_ref, head_ref, include_diff=False):
     base = run_git("merge-base", base_ref, head_ref)
     head = run_git("rev-parse", head_ref)
 
     commits = get_commits(base, head)
     changed_files = get_changed_files(base, head)
-    diff = get_diff(base, head)
+    diff = get_diff(base, head, include_diff)
 
     branch = run_git("branch", "--show-current")
     repository = Path(run_git("rev-parse", "--show-toplevel"))
@@ -154,12 +161,17 @@ def main():
     parser.add_argument("--head", default="HEAD")
     parser.add_argument(
         "--output",
-        default="DevOps/documentation/output/context.json"
+        default="./documentation/output/context.json"
+    )
+    parser.add_argument(
+        "--include-diff",
+        action="store_true",
+        help="Include the diff in the generated context."
     )
 
     args = parser.parse_args()
 
-    context = generate_context(args.base, args.head)
+    context = generate_context(args.base, args.head, args.include_diff)
 
     output_path = Path(args.output)
     output_path.parent.mkdir(parents=True, exist_ok=True)
