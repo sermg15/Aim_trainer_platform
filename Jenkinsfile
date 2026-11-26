@@ -80,22 +80,8 @@ pipeline {
 
             steps {
                 sh '''
-                    echo "=== Pull Request information ==="
-                    echo "CHANGE_ID: $CHANGE_ID"
-                    echo "CHANGE_BRANCH: $CHANGE_BRANCH"
-                    echo "CHANGE_TARGET: $CHANGE_TARGET"
-
-                    echo "=== Git version ==="
-                    git --version
-
-                    echo "=== Current commit ==="
-                    git rev-parse HEAD
-
-                    echo "=== Available branches ==="
-                    git branch -a
-
-                    echo "=== Recent commits ==="
-                    git log -5 --oneline
+                    echo "=== Git merge-base ==="
+                    git merge-base origin/develop HEAD
                 '''
             }
         }
