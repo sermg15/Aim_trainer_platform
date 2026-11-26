@@ -72,6 +72,14 @@ pipeline {
                 '''
             }
         }
+
+        stage('Automated documentation') {
+            steps {
+                sh '''
+                    echo "Generating documentation..." 
+                '''
+            }
+        }
     }
 
     post {
