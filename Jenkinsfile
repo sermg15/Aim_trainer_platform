@@ -80,9 +80,17 @@ pipeline {
 
             steps {
                 sh '''
-                    echo "=== Git merge-base ==="
-                    git merge-base origin/develop HEAD
+                    echo "=== Generating documentation context ==="
+
+                    python3 DevOps/documentation/generate_context.py \
+                        --base "origin/$CHANGE_TARGET" \
+                        --output DevOps/documentation/output/context.json
                 '''
+
+                archiveArtifacts(
+                    artifacts: 'DevOps/documentation/output/context.json',
+                    fingerprint: true
+                )
             }
         }
     }
